@@ -40,6 +40,8 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+    private String userLoc;
+
     private WeatherData weather;
     private String unit;
     private TextView local, night, even, morn, day, visi, uvL, humi, winder, descript, feeling, tempera, timeNow, ris, set;
@@ -96,6 +98,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
         unit = "imperial";
         weatherRecycle = findViewById(R.id.weatherRe);
         local = findViewById(R.id.place);
@@ -198,13 +203,15 @@ public class MainActivity extends AppCompatActivity {
                     String iconCode = "_" + icon;
                     int iconResId = getResources().getIdentifier(iconCode , "drawable", getPackageName());
                     weathIcon.setImageResource(iconResId);
-
+/*
                     JSONObject forecastObj = response.getJSONObject("current");
                     JSONObject forecastD= forecastObj.getJSONArray("hourly").getJSONObject(0);
-                    JSONArray hourArray = forecastD.getJSONArray("");
-                    for(int i = 0; i<hourArray; i++){
+                    JSONArray hourArray = forecastD.getJSONArray("hourly");
+                    for(int i = 0; i<hourArray.length(); i++){
 
-                    }
+                        weatherDataArray.add(new WeatherData(t, ic, t, d));
+                    }*/
+                    weatherAdapter.notifyDataSetChanged();
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -268,30 +275,52 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-private String getDirection(double degrees) {
-    if (degrees >= 337.5 || degrees < 22.5)
-        return "N";
-    if (degrees >= 22.5 && degrees < 67.5)
-        return "NE";
-    if (degrees >= 67.5 && degrees < 112.5)
-        return "E";
-    if (degrees >= 112.5 && degrees < 157.5)
-        return "SE";
-    if (degrees >= 157.5 && degrees < 202.5)
-        return "S";
-    if (degrees >= 202.5 && degrees < 247.5)
-        return "SW";
-    if (degrees >= 247.5 && degrees < 292.5)
-        return "W";
-    if (degrees >= 292.5 && degrees < 337.5)
-        return "NW";
-    return "X"; // We'll use 'X' as the default if we get a bad value
-}
+    private String getDirection(double degrees) {
+        if (degrees >= 337.5 || degrees < 22.5)
+            return "N";
+        if (degrees >= 22.5 && degrees < 67.5)
+            return "NE";
+        if (degrees >= 67.5 && degrees < 112.5)
+            return "E";
+        if (degrees >= 112.5 && degrees < 157.5)
+            return "SE";
+        if (degrees >= 157.5 && degrees < 202.5)
+            return "S";
+        if (degrees >= 202.5 && degrees < 247.5)
+            return "SW";
+        if (degrees >= 247.5 && degrees < 292.5)
+            return "W";
+        if (degrees >= 292.5 && degrees < 337.5)
+            return "NW";
+        return "X"; // We'll use 'X' as the default if we get a bad value
+    }
+
+    public void alert(){
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        final EditText edittext = new EditText(this);
+        alert.setMessage("Enter Your Message");
+        alert.setTitle("Enter Your Title");
+
+        alert.setView(edittext);
+
+        alert.setPositiveButton("Yes Option", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                String YouEditTextValue = edittext.getText().toString();
+            }
+        });
+
+        alert.setNegativeButton("No Option", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                // what ever you want to do with No option.
+            }
+        });
+
+        alert.show();
+    }
 
     private boolean hasNetworkConnection() {
         ConnectivityManager connectivityManager = getSystemService(ConnectivityManager.class);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         return (networkInfo != null && networkInfo.isConnectedOrConnecting());
     }
-
 }

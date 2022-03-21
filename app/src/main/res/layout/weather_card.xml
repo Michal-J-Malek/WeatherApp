@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dp"
+    android:layout_gravity="center"
+    android:layout_margin="4dp"
+    android:background="@android:color/transparent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card"
+        >
+
+        <TextView
+            android:id="@+id/idDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/day"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/idTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idDay"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/time"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck" />
+
+
+        <ImageView
+            android:id="@+id/iconWeather"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/idTime"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/idTemp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iconWeather"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/_76"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/idDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idTemp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="@string/cloudy"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            tools:ignore="TextContrastCheck" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

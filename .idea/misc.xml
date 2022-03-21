@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Michal/AndroidStudioProjects/Mlichal_Malek_Weather/app/src/main/res/drawable/card.xml" value="0.178" />
+        <entry key="..\:/Users/Michal/AndroidStudioProjects/Mlichal_Malek_Weather/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/Michal/AndroidStudioProjects/Mlichal_Malek_Weather/app/src/main/res/layout/daily_activity.xml" value="0.2722222222222222" />
+        <entry key="..\:/Users/Michal/AndroidStudioProjects/Mlichal_Malek_Weather/app/src/main/res/layout/weather_card.xml" value="0.3768518518518518" />
+        <entry key="..\:/Users/Michal/AndroidStudioProjects/Mlichal_Malek_Weather/app/src/main/res/menu/daily_menu.xml" value="0.14444444444444443" />
+        <entry key="..\:/Users/Michal/AndroidStudioProjects/Mlichal_Malek_Weather/app/src/main/res/menu/main_menu.xml" value="0.2722222222222222" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">OpenWeather App</string>
+    <string name="humidity">Humidity</string>
+    <string name="sunset">Sunset</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="_8am">8am</string>
+    <string name="todo">TODO</string>
+    <string name="_1pm">1pm</string>
+    <string name="_68">68</string>
+    <string name="_71">71</string>
+    <string name="_72_1">72</string>
+    <string name="_66">66</string>
+    <string name="visibility">Visibility</string>
+    <string name="uv_index">UV Index</string>
+    <string name="winds">Winds:</string>
+    <string name="cloud">Cloud</string>
+    <string name="feels_like">Feels Like</string>
+    <string name="_72">72</string>
+    <string name="current_time">Current Time</string>
+    <string name="location">Location</string>
+    <string name="_11pm">11pm</string>
+    <string name="_5pm">5pm</string>
+    <string name="time">time</string>
+    <string name="day">day</string>
+    <string name="todo1">TODO</string>
+    <string name="cloudy">cloud</string>
+    <string name="_76">76</string>
+</resources>
